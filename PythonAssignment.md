@@ -514,13 +514,34 @@ chk_string_greater_k("Lord is my shepard",3)
 
 Q90. Write a Python program to extract unquire dictionary values.
 
+dict1 = {'A' : [1, 3, 5, 4],
+             'B' : [4, 6, 8, 10],
+             'C' : [6, 12, 4 ,8],
+             'D' : [5, 7, 2]}
+
+print("The original dictionary is : " ,dict1)
+res = list(sorted({u for val in dict1.values() for u in val}))
+print(res) 
+
 Q91. Write a Python program to merge two dictionary.
+def fn_merge(d1,d2):
+ return(d1.update(d2))
+
+d1={'a':1,'b':2}
+d2={'c':3,'d':4}
+
+print(fn_merge(d1,d2))
+
+print(d1)
 
 Q92. Write a Python program to convert a list of tuples into dictionary.
 ```
 Input : [('Sachin', 10), ('MSD', 7), ('Kohli', 18), ('Rohit', 45)]
 Output : {'Sachin': 10, 'MSD': 7, 'Kohli': 18, 'Rohit': 45}
 ```
+a1=[('Sachin', 10), ('MSD', 7), ('Kohli', 18), ('Rohit', 45)]
+print(dict(a1))
+
 
 Q93. Write a Python program to create a list of tuples from given list having number and its cube in each tuple.
 ```
