@@ -548,12 +548,17 @@ Q93. Write a Python program to create a list of tuples from given list having nu
 Input: list = [9, 5, 6]
 Output: [(9, 729), (5, 125), (6, 216)]
 ```
-
+res = [(x,pow(x,3)) for x in list]
+print(res)
 Q94. Write a Python program to get all combinations of 2 tuples.
 ```
 Input : test_tuple1 = (7, 2), test_tuple2 = (7, 8)
 Output : [(7, 7), (7, 8), (2, 7), (2, 8), (7, 7), (7, 2), (8, 7), (8, 2)]
 ```
+t1 = [(a,b) for a in test_tuple1 for b in test_tuple2]
+t2 = [(a,b) for a in test_tuple2 for b in test_tuple1]
+
+t1+t2
 
 Q95. Write a Python program to sort a list of tuples by second item.
 ```
