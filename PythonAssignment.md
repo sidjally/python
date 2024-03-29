@@ -566,6 +566,8 @@ Input : [('for', 24), ('Geeks', 8), ('Geeks', 30)]
 Output : [('Geeks', 8), ('for', 24), ('Geeks', 30)]
 ```
 
+tup.sort(key =lambda x:x[1])
+
 Q96. Write a python program to print below pattern.
 ```
 * 
@@ -574,6 +576,13 @@ Q96. Write a python program to print below pattern.
 * * * * 
 * * * * * 
 ```
+def printpattern(n):
+ for i in range(0,n):
+ print("* "*i)
+
+print(printpattern(6))
+
+
 Q97. Write a python program to print below pattern.
 ```
     *
@@ -582,6 +591,11 @@ Q97. Write a python program to print below pattern.
  ****
 *****
 ```
+def inv_pattern(n):
+ for i in range(0,n):
+  print(" " * (n-i)+"*"*i)
+
+inv_pattern(6)
 
 Q98. Write a python program to print below pattern.
 ```
@@ -591,6 +605,9 @@ Q98. Write a python program to print below pattern.
  * * * * 
 * * * * * 
 ```
+def inv_pattern(n):
+ for i in range(0,n):
+  print(" " * (n-i)+"* "*i)
 
 Q99. Write a python program to print below pattern.
 ```
@@ -600,6 +617,13 @@ Q99. Write a python program to print below pattern.
 1 2 3 4 
 1 2 3 4 5
 ```
+def num_pattern(n):
+ for i in range(1,n+1):
+  for j in range(1,i+1):
+   print(j,end=" ")
+  print()
+  
+num_pattern(6)
 
 Q100. Write a python program to print below pattern.
 ```
@@ -609,3 +633,12 @@ C C C
 D D D D 
 E E E E E 
 ```
+def chr_pattern(n):
+ num = 65
+ for i in range(1,n+1):
+  for j in range(1,i+1):
+   print(chr(num),end=" ")
+  num=num + 1  
+  print()
+  
+chr_pattern(6)
